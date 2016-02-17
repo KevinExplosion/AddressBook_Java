@@ -1,5 +1,6 @@
 import org.junit.*;
 import static org.junit.Assert.*;
+import static org.fluentlenium.core.filter.FilterConstructor.*;
 
 import java.util.ArrayList;
 
