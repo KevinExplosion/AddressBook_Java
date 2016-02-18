@@ -1,4 +1,3 @@
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Contact {
@@ -8,6 +7,7 @@ public class Contact {
   private String mLastName;
   private String mBirthday;
   private int mId;
+  private ArrayList<Address> mAddresses;
 
   public Contact(String firstName, String lastName, String birthday){
     mFirstName = firstName;
@@ -15,6 +15,7 @@ public class Contact {
     mBirthday = birthday;
     instances.add(this);
     mId = instances.size();
+    mAddresses = new ArrayList<Address>();
   }
 
   public String getFirstName() {
@@ -48,5 +49,13 @@ public class Contact {
 
   public static void clear() {
     instances.clear();
+  }
+
+  public ArrayList<Address> getAddresses() {
+    return mAddresses;
+  }
+
+  public void addAddress(Address address) {
+    mAddresses.add(address);
   }
 }
