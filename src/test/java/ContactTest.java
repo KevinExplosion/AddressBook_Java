@@ -36,4 +36,32 @@ public class ContactTest {
     assertTrue(Contact.all().contains(firstContact));
     assertTrue(Contact.all().contains(secondContact));
   }
+
+  @Test
+  public void newId_contactsInstantiateWithAnID_true() {
+    Contact myContact = new Contact("Daren", "Schaad", "January 23 1981");
+    assertEquals(Contact.all().size(), myContact.getId());
+  }
+
+  @Test
+  public void find_returnsContactWithSameId_secondContact() {
+    Contact firstContact = new Contact("Kevin", "Mattison", "November 13 1983");
+    Contact secondContact = new Contact("Daren", "Schaad", "January 23 1981");
+    assertEquals(Contact.find(secondContact.getId()), secondContact);
+  }
+
+  @Test
+  public void find_returnsNullWhenNoContactFound_null() {
+    assertTrue(Contact.find(999) == null);
+  }
+
+  @Test
+  public void clear_emptiesAllContactsFromArrayList() {
+    Contact myContact = new Contact("Daren", "Schaad", "January 23 1981");
+    Contact.clear();
+    assertEquals(Contact.all().size(), 0);
+  }
+
+  @Rule
+  public ClearRule clearRule = new ClearRule();
 }

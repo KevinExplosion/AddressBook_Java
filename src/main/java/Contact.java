@@ -29,7 +29,24 @@ public class Contact {
     return mBirthday;
   }
 
+  public int getId() {
+    return mId;
+  }
+
   public static ArrayList<Contact> all() {
     return instances;
+  }
+
+  public static Contact find(int id) {
+    try {
+      return instances.get(id -1);
+    }
+    catch (IndexOutOfBoundsException exception) {
+      return null;
+    }
+  }
+
+  public static void clear() {
+    instances.clear();
   }
 }
