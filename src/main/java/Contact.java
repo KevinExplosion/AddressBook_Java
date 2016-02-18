@@ -12,6 +12,17 @@ public class Contact {
     mFirstName = firstName;
     mLastName = lastName;
     mBirthday = birthday;
+  }
 
+  public String getFirstName() {
+    return mFirstName;
+  }
+
+  public String getLastName() {
+    return mLastName;
+  }
+
+  public String getBirthday() {
+    return mBirthday;
   }
 }
