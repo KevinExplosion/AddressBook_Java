@@ -28,4 +28,12 @@ public class ContactTest {
     Contact myContact = new Contact("Kevin", "Mattison", "November 13 1983");
     assertEquals("November 13 1983", myContact.getBirthday());
   }
+
+  @Test
+  public void all_returnsAllInstancesOfContacts_true() {
+    Contact firstContact = new Contact("Kevin", "Mattison", "November 13 1983");
+    Contact secondContact = new Contact("Daren", "Schaad", "January 23 1981");
+    assertTrue(Contact.all().contains(firstContact));
+    assertTrue(Contact.all().contains(secondContact));
+  }
 }

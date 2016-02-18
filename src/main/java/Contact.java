@@ -7,11 +7,14 @@ public class Contact {
   private String mFirstName;
   private String mLastName;
   private String mBirthday;
+  private int mId;
 
   public Contact(String firstName, String lastName, String birthday){
     mFirstName = firstName;
     mLastName = lastName;
     mBirthday = birthday;
+    instances.add(this);
+    mId = instances.size();
   }
 
   public String getFirstName() {
@@ -24,5 +27,9 @@ public class Contact {
 
   public String getBirthday() {
     return mBirthday;
+  }
+
+  public static ArrayList<Contact> all() {
+    return instances;
   }
 }
