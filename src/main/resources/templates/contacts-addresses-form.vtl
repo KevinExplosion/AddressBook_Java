@@ -1,0 +1,22 @@
+contacts-addresses-form.vtl
+<h1>$contact.getFirstName() $contact.getLastName()</h1>
+<p>Add an address to this contact</p>
+
+<form action="/addresses" method="post">
+  <label for="addressType">Address Type</label>
+  <input id="addressType" name="addressType" type="text" placeholder="Home, Buisness etc.">
+
+  <label for="street">Street Address</label>
+  <input id="street" name="street" type="text" placeholder="1234 NE Broadway etc.">
+
+  <label for="city">City</label>
+  <input id="city" name="city" type="text">
+
+  <label for="state">State</label>
+  <input id="state" name="state" type="text">
+
+  <label for="zipCode">Zip Code</label>
+  <input id="zipCode" name="zipCode" type="number">
+
+  <button type="submit" class="btn btn-default">Add Address</button>
+</form>

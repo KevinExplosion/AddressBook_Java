@@ -1,0 +1,18 @@
+home.vtl
+
+<h1>My Address Book</h1>
+
+<p>Add a new Contact:</p>
+
+<form action="/contacts" method="post">
+  <label for="firstName">First Name</label>
+  <input id="firstName" name="firstName" type="text" placeholder="First Name">
+
+  <label for="lastName">Last Name</label>
+  <input id="lastName" name="lastName" type="text" placeholder="Last Name">
+
+  <label for="birthday">Date of Birth</label>
+  <input id="birthday" name="birthday" type="date">
+
+  <button type="submit" class="btn btn-default">Add Contact</button>
+</form>

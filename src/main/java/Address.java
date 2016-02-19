@@ -8,6 +8,7 @@ public class Address {
   private String mCity;
   private String mState;
   private int mZipCode;
+  private int mId;
 
   public Address(String addressType, String street, String city, String state, int zipCode) {
     mAddressType = addressType;
@@ -16,7 +17,7 @@ public class Address {
     mState = state;
     mZipCode = zipCode;
     instances.add(this);
-    // mId = instances.size();
+    mId = instances.size();
   }
 
   public String getType() {
@@ -39,6 +40,10 @@ public class Address {
     return mZipCode;
   }
 
+  public int getId() {
+    return mId;
+  }
+
   public static ArrayList<Address> all() {
     return instances;
   }
@@ -54,5 +59,4 @@ public class Address {
   public static void clear() {
     instances.clear();
   }
-
 }

@@ -1,0 +1,11 @@
+contacts.vtl
+
+<h1>Contacts</h1>
+
+#foreach($contact in $contacts)
+  <h3><a href="contacts/$contact.getId()">$contact.getFirstName() $contact.getLastName()</a></h3>
+#end
+
+<h3>Click on a contact to add an address</h3>
+
+<a href="/">Return to Main Page</a>

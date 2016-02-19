@@ -1,0 +1,12 @@
+addresses.vtl
+
+<h1>Addresses for $contact.getFirstName() $contact.getLastName()</h1>
+<ul>
+#foreach ($address in $addresses)
+  <li>$address.getType() $address.getStreet() $address.getCity() $address.getState() $address.getZipCode()
+  </li>
+#end
+</ul>
+
+<a href="/">Go Back Home</a>
+<a href="#"></a>
